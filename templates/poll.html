@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script type="text/javascript">
+      
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+         
+        function setGetParameter(num){
+            
+            window.location.href = "{% url 'ended' %}" + "?polledtowhom="+num;
+        }
+        </script>
+        <title>Poll</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+    
+        <h1 style="text-align: center;">Pick Your Rep</h1>
+        <div style="display: flex;
+        column-gap: 20px;
+        justify-content: space-around;border:0.5px solid black;text-align:start;vertical-align:top;">
+           <label >1. Dr. Babu</label>
+           <i class="glyphicon glyphicon-pencil"></i>
+            <button onclick="setGetParameter(1)" style="color: red;"type="submit" >Poll</button>
+          </div>
+          <br><br>
+          <div style="display: flex;
+          column-gap: 20px;
+          justify-content: space-around;border:0.5px solid black;text-align:start;vertical-align:top;">
+             <label>2. Mohan R</label>
+             <i class="glyphicon glyphicon-home"></i>
+              <button onclick="setGetParameter(2)" style="color: red;" type="submit" >Poll</button>
+            </div>
+            <br><br>
+            <div style="display: flex;
+            column-gap: 20px;
+            justify-content: space-around;border:0.5px solid black;text-align:start;vertical-align:top;">
+               <label>3. Dr. Bindhu</label>
+               <i class="glyphicon glyphicon-leaf"></i>
+                <button onclick="setGetParameter(3)" style="color: red;"type="submit" >Poll </button>
+              </div>
+            <br><br>
+            <div style="display: flex;
+            column-gap: 20px;
+            justify-content: space-around;border:0.5px solid black;text-align:start;vertical-align:top;">
+               <label>4. Kr Narayanan</label>
+               <i class="glyphicon glyphicon-apple"></i>
+                <button onclick="setGetParameter(4)" style="color: red;"type="submit" >Poll</button>
+              </div>
+            <br><br>
+            <div style="display: flex;
+            column-gap: 20px;
+            justify-content: space-around;border:0.5px solid black;text-align:start;vertical-align:top;">
+               <label>5. Dr. Vijayan</label>
+               <i class="glyphicon glyphicon-wrench"></i>
+                <button onclick="setGetParameter(5)" style="color: red;"type="submit" >Poll</button>
+              </div>
+              <br><br>
+              <div style="display: flex;
+              column-gap: 20px;
+              justify-content: space-around;border:0.5px solid black;text-align:start;vertical-align:top;">
+                 <label>6. Ramesh C</label>
+                 <i class="glyphicon glyphicon-phone-alt"></i>
+                  <button onclick="setGetParameter(6)" style="color: red;" type="submit" >Poll </button>
+                </div>
+    </body>
+</html>

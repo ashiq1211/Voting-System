@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Polled</title>
+    </head>
+    <body style=" position: relative; 
+    height: 100vh; 
+    margin: 0; ">
+    <h1 style="position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 100%; 
+    text-align: center;
+    margin: 0;">Your Vote has been Successfully Polled!!!</h1>
+       <button style="position: absolute; 
+       left:45%;
+       top: 60%; 
+       transform: translateY(-50%); 
+       width: 10%; 
+       text-align: center;
+       margin: 0;"><a href="{% url 'vote'%}">Poll Another</a> </button>
+    </body>
+</html>
