@@ -1,0 +1,84 @@
+<html>
+    <head>
+      <script type="text/javascript">
+      
+     
+       
+        function sendNameAndSize(nameAndSize){
+            console.log(nameAndSize)
+            window.location.replace("{% url 'viewProduct' %}" + "?productNameAndSize="+nameAndSize);
+           
+            
+        }
+        </script>
+    </head>
+    <body>
+        <nav style="background: #0c0c0c;
+        height: 80px;
+        width: 100%;">
+          
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1200px-H%26M-Logo.svg.png" alt="logo" style="width:10%;height:50%;padding:20px">
+          <ul style="float: right;
+          margin-right: 200px;">
+            <li style=" display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;"><a style=" color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;" href="#">Home</a></li>
+            <li style=" display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;"><a style=" color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;"href="#">About</a></li>
+            <li style=" display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;"><a style=" color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;"href="#">Services</a></li>
+            <li style=" display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;"><a style=" color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;"href="#">Contact</a></li>
+            <li style=" display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;"> <a style=" color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;"href="#">Orders</a></li>
+          </ul>
+        </nav>
+        <h1 style="text-align: center;margin: 170px;margin-top:75px">Details of this Product</h1>
+        <div style="display: flex;justify-content:space-around">
+          <img src={{item.5}} style="width:45%;height:75%;">
+          <div><h2>{{item.1}}</h2>
+          <h2>Rs. {{item.3}}</h2>
+          <h3 style="color: crimson;">Carbon Footprint: {{item.4}}</h3>
+          <label for="cars" style="font-size:25px;">Size:</label>
+
+<select onchange="sendNameAndSize(this.value)" style="width: 40px;height:30px">
+  <option value={{item.2}}+{{item.1}} selected>{{item.2}}</option>
+  <option value="S+{{item.1}}">S<{{item.1}}/option>
+  <option value="M+{{item.1}}">M</option>
+  <option value="L+{{item.1}}">L</option>
+  <option value="XL+{{item.1}}">XL</option>
+</select><br><br>
+<button style="border-radius: 15px ; padding:15px;color: white;background-color:black"type="submit" >Order Now</button>
+          </div>
+          
+        </div>
+        
+        <div> <h2>{{item.6}} </h2></div>
+        
+    
+    </body>
+</html>
